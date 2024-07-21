@@ -1,146 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Mirza's Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
     <header>
-      <h1>Ahmed Mirza</h1>
-      <p>Gulshan-e-Iqbal, Block-1, Karachi</p>
-      <p>
-        Email:
-        <a href="mailto:ahmedmirza2997@gmail.com">ahmedmirza2997@gmail.com</a>
-      </p>
-      <p>
-        LinkedIn:
-        <a href="https://www.linkedin.com/in/ahmed-mirza-86b899204/"
-          >Ahmed Mirza</a
-        >
-      </p>
+        <h1>Ahmed Mirza</h1>
+        <p>Gulshan-e-Iqbal, Block-1, Karachi</p>
+        <p>Email: <a href="mailto:ahmedmirza2997@gmail.com">ahmedmirza2997@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/ahmed-mirza-86b899204/">Ahmed Mirza</a></p>
     </header>
-
+    
     <nav>
-      <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#skills">Skill Set</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#resume">Resume</a></li>
-      </ul>
+        <ul>
+            <li><a href="#overview" onclick="navigateTo('overview')">Overview</a></li>
+            <li><a href="#skills" onclick="navigateTo('skills')">Skill Set</a></li>
+            <li><a href="#experience" onclick="navigateTo('experience')">Experience</a></li>
+            <li><a href="#projects" onclick="navigateTo('projects')">Projects</a></li>
+            <li><a href="#resume" onclick="navigateTo('resume')">Resume</a></li>
+        </ul>
     </nav>
 
-    <section id="overview">
-      <h2>Overview</h2>
-      <p>
-        A hardworking, ambitious, task-focused person always ready to empower
-        knowledge and gain experience. I am eager to be challenged to grow and
-        improve my skills. My career objective is to be part of an organization
-        that provides a healthy competitive environment that will help in
-        polishing my professional skills.
-      </p>
-    </section>
+    <main id="main-content">
+        <section id="overview" class="content-section">
+            <h2>Overview</h2>
+            <p>A hardworking, ambitious, task-focused person always ready to empower knowledge and gain experience. I am eager to be challenged to grow and improve my skills. My career objective is to be part of an organization that provides a healthy competitive environment that will help in polishing my professional skills.</p>
+        </section>
 
-    <section id="skills">
-      <h2>Skill Set</h2>
-      <ul>
-        <li>React Native</li>
-        <li>React JS</li>
-        <li>JavaScript</li>
-        <li>HTML/CSS/Bootstrap</li>
-        <li>C#</li>
-        <li>MS Office (Word, PowerPoint, Excel)</li>
-      </ul>
-      <h3>Personal Skills</h3>
-      <ul>
-        <li>Effective Communication</li>
-        <li>Problem Solving</li>
-        <li>Teamwork</li>
-        <li>Adaptability</li>
-        <li>Time Management</li>
-        <li>Decision Making</li>
-        <li>Presentation Skill</li>
-      </ul>
-    </section>
+        <section id="skills" class="content-section">
+            <h2>Skill Set</h2>
+            <ul>
+                <li>React Native</li>
+                <li>React JS</li>
+                <li>JavaScript</li>
+                <li>HTML/CSS/Bootstrap</li>
+                <li>C#</li>
+                <li>MS Office (Word, PowerPoint, Excel)</li>
+            </ul>
+            <h3>Personal Skills</h3>
+            <ul>
+                <li>Effective Communication</li>
+                <li>Problem Solving</li>
+                <li>Teamwork</li>
+                <li>Adaptability</li>
+                <li>Time Management</li>
+                <li>Decision Making</li>
+                <li>Presentation Skill</li>
+            </ul>
+        </section>
 
-    <section id="experience">
-      <h2>Experience</h2>
-      <h3>Software Engineer. Paysys Labs (July 2022 - Present)</h3>
-      <ul>
-        <li>
-          Worked on React Native CLI Firebase Notifications along with Firebase
-          Crashlytics and Analytics Integration.
-        </li>
-        <li>
-          Worked on projects that require hands-on ReactHooks to use state and
-          lifecycle methods inside functional components together with Redux to
-          manage the application state and applying middleware such as
-          Redux-Toolkit.
-        </li>
-        <li>
-          Generating SSL Pinning certificates as well implementing third-party
-          API Integration, like Google, Facebook, Discord, Firebase.
-        </li>
-        <li>
-          Done Projects and Sprints as a Leading Capacity coupled with Mentoring
-          and Training Juniors for various projects.
-        </li>
-      </ul>
-      <h3>
-        Junior React Native Developer. TekRevol (January 2022 - June 2022)
-      </h3>
-      <ul>
-        <li>
-          Build and maintain React Native iOS/Android mobile applications with
-          clean code in addition to working on React Native CLI and Expo CLI
-          along with Expo Push Notifications.
-        </li>
-        <li>
-          Worked on applications that require use of Redux in order to manage
-          the application state and applying middleware such as Redux-Thunk and
-          Redux-Saga.
-        </li>
-      </ul>
-      <h3>
-        Junior React Native Developer. Murtajis-The Software Company (January
-        2021 - January 2022)
-      </h3>
-      <ul>
-        <li>
-          Reviewing application requirements from provided FSD and participating
-          in meetings with the development team to discuss user interface ideas
-          and applications.
-        </li>
-        <li>
-          Developing front end of the application with React Hooks and by using
-          functional components accompanied by clean, smooth animations.
-        </li>
-      </ul>
-    </section>
+        <section id="experience" class="content-section">
+            <h2>Experience</h2>
+            <h3>Software Engineer. Paysys Labs (July 2022 - Present)</h3>
+            <ul>
+                <li>Worked on React Native CLI Firebase Notifications along with Firebase Crashlytics and Analytics Integration.</li>
+                <li>Worked on projects that require hands-on ReactHooks to use state and lifecycle methods inside functional components together with Redux to manage the application state and applying middleware such as Redux-Toolkit.</li>
+                <li>Generating SSL Pinning certificates as well implementing third-party API Integration, like Google, Facebook, Discord, Firebase.</li>
+                <li>Done Projects and Sprints as a Leading Capacity coupled with Mentoring and Training Juniors for various projects.</li>
+            </ul>
+            <h3>Junior React Native Developer. TekRevol (January 2022 - June 2022)</h3>
+            <ul>
+                <li>Build and maintain React Native iOS/Android mobile applications with clean code in addition to working on React Native CLI and Expo CLI along with Expo Push Notifications.</li>
+                <li>Worked on applications that require use of Redux in order to manage the application state and applying middleware such as Redux-Thunk and Redux-Saga.</li>
+            </ul>
+            <h3>Junior React Native Developer. Murtajis-The Software Company (January 2021 - January 2022)</h3>
+            <ul>
+                <li>Reviewing application requirements from provided FSD and participating in meetings with the development team to discuss user interface ideas and applications.</li>
+                <li>Developing front end of the application with React Hooks and by using functional components accompanied by clean, smooth animations.</li>
+            </ul>
+        </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <ul>
-        <li>NATIONAL SAVINGS DIGITAL APP</li>
-        <li>NBP DIGITAL (National Bank of Pakistan Mobile App)</li>
-        <li>PAYAPP (Payment Solution App)</li>
-        <li>BNB (Restaurant App)</li>
-        <li>EQUITRIP (Delivery And Live Location Tracking App)</li>
-      </ul>
-    </section>
+        <section id="projects" class="content-section">
+            <h2>Projects</h2>
+            <ul>
+                <li>NATIONAL SAVINGS DIGITAL APP</li>
+                <li>NBP DIGITAL (National Bank of Pakistan Mobile App)</li>
+                <li>PAYAPP (Payment Solution App)</li>
+                <li>BNB (Restaurant App)</li>
+                <li>EQUITRIP (Delivery And Live Location Tracking App)</li>
+            </ul>
+        </section>
 
-    <section id="resume">
-      <h2>Resume</h2>
-      <p>
-        You can download my resume
-        <a href="path_to_your_resume.pdf" download>here</a>.
-      </p>
-    </section>
+        <section id="resume" class="content-section">
+            <h2>Resume</h2>
+            <p>You can download my resume <a href="path_to_your_resume.pdf" download>here</a>.</p>
+        </section>
+    </main>
 
     <footer>
-      <p>&copy; 2024 Ahmed Mirza</p>
+        <p>&copy; 2024 Ahmed Mirza</p>
     </footer>
-  </body>
+
+    <script src="scripts.js"></script>
+</body>
 </html>
