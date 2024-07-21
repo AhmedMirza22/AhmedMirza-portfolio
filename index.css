@@ -14,6 +14,7 @@ header {
   width: 100%;
   top: 0;
   z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -40,26 +41,19 @@ nav ul li a:hover {
 }
 
 .section {
-  padding: 100px 20px;
+  padding: 120px 20px 20px 20px;
   min-height: 100vh;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-#overview {
-  background-color: #ffffff;
-}
-
-#experience {
+.section:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-#projects {
-  background-color: #ffffff;
-}
-
-#contact {
-  background-color: #f9f9f9;
+.content {
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 h1,
@@ -67,12 +61,30 @@ h2 {
   color: #333;
 }
 
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .project img {
-  width: 50px;
-  height: 50px;
-  margin: 0 10px;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
 }
 
 .project {
   margin-bottom: 20px;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

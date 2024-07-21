@@ -8,26 +8,27 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetId = this.getAttribute("href").substring(1);
       const targetSection = document.getElementById(targetId);
 
-      sections.forEach((section) => {
-        section.style.opacity = 0;
-        setTimeout(() => {
-          section.style.display = "none";
-        }, 500);
+      window.scrollTo({
+        top:
+          targetSection.offsetTop -
+          document.querySelector("header").offsetHeight,
+        behavior: "smooth",
       });
-
-      setTimeout(() => {
-        targetSection.style.display = "block";
-        setTimeout(() => {
-          targetSection.style.opacity = 1;
-        }, 50);
-      }, 500);
     });
   });
 
-  // Set the initial section
-  const initialSection = document.getElementById("overview");
-  initialSection.style.display = "block";
-  setTimeout(() => {
-    initialSection.style.opacity = 1;
-  }, 50);
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+    sections.forEach((section) => {
+      if (
+        scrollPosition >= section.offsetTop &&
+        scrollPosition < section.offsetTop + section.offsetHeight
+      ) {
+        const id = section.getAttribute("id");
+        document.querySelector("nav a.active")?.classList.remove("active");
+        document.querySelector(`nav a[href="#${id}"]`).classList.add("active");
+      }
+    });
+  });
 });
