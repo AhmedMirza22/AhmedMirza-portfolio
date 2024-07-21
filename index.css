@@ -2,20 +2,14 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  background-color: #f4f4f9;
+  background-color: #f0f0f0;
   color: #333;
 }
 
 header {
-  background-color: #4caf50;
-  color: white;
-  text-align: center;
-  padding: 1em 0;
-}
-
-nav {
   background-color: #333;
+  color: white;
+  padding: 1rem 0;
   position: fixed;
   width: 100%;
   top: 0;
@@ -23,7 +17,7 @@ nav {
 }
 
 nav ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
@@ -37,42 +31,48 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  padding: 14px 20px;
-  display: block;
+  font-size: 1.2rem;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  background-color: #ddd;
-  color: black;
+  color: #1e90ff;
 }
 
-main {
-  margin-top: 60px;
-  padding: 20px;
-}
-
-.content-section {
-  display: none;
+.section {
+  padding: 100px 20px;
+  min-height: 100vh;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.content-section.active {
-  display: block;
-  opacity: 1;
+#overview {
+  background-color: #ffffff;
 }
 
+#experience {
+  background-color: #f9f9f9;
+}
+
+#projects {
+  background-color: #ffffff;
+}
+
+#contact {
+  background-color: #f9f9f9;
+}
+
+h1,
 h2 {
-  border-bottom: 2px solid #4caf50;
-  padding-bottom: 10px;
+  color: #333;
 }
 
-footer {
-  text-align: center;
-  padding: 10px;
-  background-color: #333;
-  color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+.project img {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+}
+
+.project {
+  margin-bottom: 20px;
 }

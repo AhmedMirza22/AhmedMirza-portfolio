@@ -1,25 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll(".content-section");
-  const navLinks = document.querySelectorAll("nav ul li a");
+  const links = document.querySelectorAll("nav a");
+  const sections = document.querySelectorAll(".section");
 
-  function navigateTo(sectionId) {
-    sections.forEach((section) => {
-      if (section.id === sectionId) {
-        section.classList.add("active");
-      } else {
-        section.classList.remove("active");
-      }
-    });
-  }
+  links.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const targetSection = document.getElementById(targetId);
 
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const targetSectionId = this.getAttribute("href").substring(1);
-      navigateTo(targetSectionId);
+      sections.forEach((section) => {
+        section.style.opacity = 0;
+        setTimeout(() => {
+          section.style.display = "none";
+        }, 500);
+      });
+
+      setTimeout(() => {
+        targetSection.style.display = "block";
+        setTimeout(() => {
+          targetSection.style.opacity = 1;
+        }, 50);
+      }, 500);
     });
   });
 
-  // Display the overview section by default
-  navigateTo("overview");
+  // Set the initial section
+  const initialSection = document.getElementById("overview");
+  initialSection.style.display = "block";
+  setTimeout(() => {
+    initialSection.style.opacity = 1;
+  }, 50);
 });
